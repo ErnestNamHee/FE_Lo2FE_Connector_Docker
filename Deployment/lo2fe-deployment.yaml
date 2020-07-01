@@ -1,0 +1,73 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: lo2fe
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: lo2fe
+ strategy:
+   type: RollingUpdate
+ template:
+   metadata:
+     labels:
+       app: lo2fe
+   spec:
+     containers:
+     - image: 100.125.0.94:20202/ernest/lo2fe:latest
+       imagePullPolicy: Always
+       name: lo2fe
+       env:
+       - name: NODE_RED_CREDENTIAL_SECRET
+         value: "lo2fe-secret"
+       - name: FLOWS
+         value: "flows_nhe-livebobject-connector.json"
+       - name: DIS_ENDPOINT
+         value: "https://dis.eu-west-0.prod-cloud-ocb.orange-business.com"
+       - name: DIS_PROJECT
+         value: "eu-west-0"
+       - name: DIS_TOKEN_USERNAME
+         valueFrom:
+           secretKeyRef:
+             name: lo2fe-secret
+             key: DIS_TOKEN_USERNAME
+       - name: DIS_TOKEN_PASSWORD
+         valueFrom:
+           secretKeyRef:
+             name: lo2fe-secret
+             key: DIS_TOKEN_PASSWORD
+       - name: DIS_AK
+         valueFrom:
+           secretKeyRef:
+             name: lo2fe-secret 
+             key: DIS_AK 
+       - name: DIS_SK
+         valueFrom:
+           secretKeyRef:
+             name: lo2fe-secret
+             key: DIS_SK
+       - name: LO_URI 
+         value: "ssl://liveobjects.orange-business.com:8883"
+       - name: LO_FIFO
+         value: "fifo/Flexible_Engine_FIFO"
+       - name: LO_API_KEY 
+         valueFrom:
+           secretKeyRef:
+             name: lo2fe-secret
+             key: LO_API_KEY 
+
+       volumeMounts:
+       - mountPath: /data 
+         name: pvc-data
+         subPath: lo2fe
+
+
+     imagePullSecrets:
+       - name: default-secret
+       - name: lo2fe-secret 
+     volumes:
+     - name: pvc-data
+       persistentVolumeClaim:
+         claimName: cce-sfs-ernest-cce-pvc
+
