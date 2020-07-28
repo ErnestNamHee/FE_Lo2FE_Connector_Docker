@@ -9,9 +9,12 @@ The following service need to be provisionned on Flexible Engine and Live Object
   - Live Object FIFO
   - Live Object API Key (https://liveobjects.orange-business.com/doc/html/lo_manual_v2.html#REST_MQTT_APP)
   
-## 2. Create Cloud Container Engine (CCE) on Flexible Engine
+## 2. (Optional) Create Cloud Container Engine (CCE) on Flexible Engine
 
-In order to run the docker image on Flexible Engine, you can rely on Cloud Container Engine
+In order to run the docker image on Flexible Engine, Flexible Engine Cloud Container Engine (CCE) can be used to deploy the connector container images
+
+The detail description on how to create a Kubernetes Cluster in available [here](https://docs.prod-cloud-ocb.orange-business.com/usermanual2/cce/cce_01_0028.html)
+
 
 ## 3. Build the Lo2FE_Docker image from GIThub repository
 
