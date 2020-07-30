@@ -48,11 +48,11 @@ In order to encode the data, you can use online encoding tools (https://www.base
 
 | Information | Description | Example Value (ENCODED in base64) |   Example Value (NON ENCODED base64) |
 | --- | --- | --- | ---- |
-| LO_API_KEY | Life Object API Key | NjAzODE2ZjIwOTczNGE0MDg0MjFlNzEyYzAxNGRiMDI= | d2bf5cf323894b4bae08beac9cc4276e |
-| DIS_AK | Flexible Engine Credential correspond to Flexible Engine Access Key (AK) | V09ZUDlLVU1VSlQ2QlZTR1pGUkE= | xxxxxxx|
-| DIS_SK | Flexible Engine Credential correspond to Flexible Engine Secret Key (SK) | V3F0NVRiVXhlbXNKNThuTVpZeEdIYWNtdVFuT3lSaHdDUGFOb2ZZNA== |  | xxxxxxx|
-| DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User | ZXJuZXN0Lm5hbS5oZWU= |  | xxxxxxx|
-| DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password  | NVR2bWRsbWRtczE1ZUA= |  | xxxxxxx|
+| LO_API_KEY | Life Object API Key | NjAzODE2ZjIwOTczNGE0MDg0MjFlNzEyYzAxNGRiMDIx= | d2bf5cf323894b4bae08beac9cc4276e |
+| DIS_AK | Flexible Engine Credential correspond to Flexible Engine Access Key (AK) | V09ZUDlLVU1VSlQ2QlZTR1pGUkEx= | xxxxxxx|
+| DIS_SK | Flexible Engine Credential correspond to Flexible Engine Secret Key (SK) | V3F0NVRiVXhlbXNKNThuTVpZeEdIYWNtdVFuT3lSaHdDUGFOb2ZZNAx== |  | xxxxxxx|
+| DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User | ZXJuZXN0Lm5hbS5oZWUx= |  xxxxxxx|
+| DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password  | NVR2bWRsbWRtczE1ZUAx= | xxxxxxx|
 
 
 ## 3. Configure and Deploy the Lo2FE_Connector Docker image on Flexible Engine CCE
