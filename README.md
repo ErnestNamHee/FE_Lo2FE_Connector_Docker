@@ -47,7 +47,7 @@ For security reason, the sensitive Data such as API KEYs are kept inside Secret 
 In order to encode the data, you can use online encoding tools (https://www.base64encode.org/)
 
 | Information | Description | Example Value (ENCODED in base64) | Example Value (NON ENCODED base64) |
-| --- | --- | --- | ---- |
+| --- | --- | --- | --- |
 | LO_API_KEY | Life Object API Key | NjAzODE2ZjIwOTczNGE0MDg0MjFlNzEyYzAxNGRiMDIx= | d2bf5cf323894b4bae08beac9cc4276e |
 | DIS_AK | Flexible Engine Credential correspond to Flexible Engine Access Key (AK) | V09ZUDlLVU1VSlQ2QlZTR1pGUkEx= | xxxxxxx|
 | DIS_SK | Flexible Engine Credential correspond to Flexible Engine Secret Key (SK) | V3F0NVRiVXhlbXNKNThuTVpZeEdIYWNtdVFuT3lSaHdDUGFOb2ZZNAx== |xxxxxxx|
