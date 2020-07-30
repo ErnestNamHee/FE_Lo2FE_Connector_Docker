@@ -15,7 +15,8 @@ spec:
        app: lo2fe
    spec:
      containers:
-     - image: 100.125.0.94:20202/ernest/lo2fe:latest
+     #- image: 100.125.0.94:20202/ernest/lo2fe:latest
+     - image: ernest/lo2fe:latest
        imagePullPolicy: Always
        name: lo2fe
        env:
