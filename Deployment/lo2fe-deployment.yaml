@@ -28,6 +28,8 @@ spec:
          value: "https://dis.eu-west-0.prod-cloud-ocb.orange-business.com"
        - name: DIS_PROJECT
          value: "eu-west-0"
+       - name: DIS_STREAMNAME
+         value: "dis-liveobject"
        - name: DIS_TOKEN_USERNAME
          valueFrom:
            secretKeyRef:
