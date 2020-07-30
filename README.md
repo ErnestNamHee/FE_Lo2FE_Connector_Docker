@@ -41,7 +41,7 @@ The detail description on how to create a Kubernetes Cluster in available here [
 
 ### 2.2 Create the Storage to persist the connector data
 
-### 2.3 Create the Secret
+### 2.3 Create the Secret to store sensitive data
 
 For security reason, the sensitive Data such as API KEYs are kept inside Secret and the value are encoded using base64 
 In order to encode the data, you can use online encoding tools (https://www.base64encode.org/)
@@ -55,11 +55,16 @@ In order to encode the data, you can use online encoding tools (https://www.base
 | DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password  | NVR2bWRsbWRtczE1ZUAx= | xxxxxxx|
 
 
-## 3. Configure and Deploy the Lo2FE_Connector Docker image on Flexible Engine CCE
+## 3. Deploy the Lo2FE_Connector on Flexible Engine CCE
 
 The Lo2FE connector is available as docker image available on Docker Hub at [here](https://hub.docker.com/u/enamhee).
 
-### 3.1 Through Flexible Engine CCE User Interface
+It is possible to deploy the Lo2FE connector using two methods:
+  - Through Flexible Engine CCE User Interface
+  - Through Kubectl Command line
+
+
+### 3.1 Deploying Through Flexible Engine CCE User Interface
 
 You can use Flexible Engine CCE GUI to deploy the Lo2FE Connector Docker Image
 
@@ -72,15 +77,15 @@ Below is the Environment Parameter required by the images
 | FLOWS | NodeRed Flow Name  | flows_nhe-livebobject-connector.json |
 | DIS_ENDPOINT | DIS End Point. Please refer to  [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com |  
 | DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | eu-west-0 |  
-| DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User Name | Reference to lo2fe-secret (DIS_TOKEN_USERNAME)|  
-| DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password | Reference to lo2fe-secret (DIS_TOKEN_PASSWORD)|  
-| DIS_AK | Flexible Engine Credential correspond to Access Key (AK) | Reference to lo2fe-secret (DIS_AK)| 
-| DIS_SK | Flexible Engine Credential correspond to Secredt Key (SD) | Reference to lo2fe-secret (DIS_SK)| 
+| DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User Name | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_USERNAME)|  
+| DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_PASSWORD)|  
+| DIS_AK | Flexible Engine Credential correspond to Access Key (AK) | Value is stored in Secret *lo2fe-secret* (DIS_AK)| 
+| DIS_SK | Flexible Engine Credential correspond to Secredt Key (SD) | Value is stored in Secret *lo2fe-secret* (DIS_SK)| 
 | LO_URI | URI to connect to Live Object | ssl://liveobjects.orange-business.com:8883 |
-| LO_API_KEY | API Key with relevant right to read Live Object FIFO | Reference to lo2fe-secret (LO_API_KEY)| 
+| LO_API_KEY | API Key with relevant right to read Live Object FIFO | Value is stored in Secret *lo2fe-secret* (LO_API_KEY)| 
 
 
-### 3.2 Through Kubectl commande line
+### 3.2 Deploying Through Kubectl commande line
 
 
 ## 4. (Optional) Build the Lo2FE_Docker image from GIThub repository
