@@ -20,8 +20,8 @@ spec:
        imagePullPolicy: Always
        name: lo2fe
        env:
-       - name: NODE_RED_CREDENTIAL_SECRET
-         value: "lo2fe-secret"
+       #- name: NODE_RED_CREDENTIAL_SECRET
+       #  value: "lo2fe-secret"
        #- name: FLOWS
        #  value: "flows_nhe-livebobject-connector.json"
        - name: DIS_ENDPOINT
