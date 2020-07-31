@@ -72,5 +72,6 @@ spec:
      volumes:
      - name: pvc-data
        persistentVolumeClaim:
-         claimName: cce-sfs-import-ernest-cce-pvc 
+        # claimName: cce-sfs-import-ernest-cce-pvc 
+        claimName: cce-evs-liveobject 
 
