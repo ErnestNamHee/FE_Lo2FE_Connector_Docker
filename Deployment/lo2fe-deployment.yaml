@@ -22,8 +22,8 @@ spec:
        env:
        - name: NODE_RED_CREDENTIAL_SECRET
          value: "lo2fe-secret"
-       - name: FLOWS
-         value: "flows_nhe-livebobject-connector.json"
+       #- name: FLOWS
+       #  value: "flows_nhe-livebobject-connector.json"
        - name: DIS_ENDPOINT
          value: "https://dis.eu-west-0.prod-cloud-ocb.orange-business.com"
        - name: DIS_PROJECT
@@ -60,10 +60,10 @@ spec:
              name: lo2fe-secret
              key: LO_API_KEY 
 
-       volumeMounts:
-       - mountPath: /data 
-         name: pvc-data
-         subPath: lo2fe
+      # volumeMounts:
+      # - mountPath: /data 
+      #   name: pvc-data
+      #   subPath: lo2fe
 
 
      imagePullSecrets:

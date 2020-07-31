@@ -11,9 +11,16 @@ RUN npm i node-red-node-base64
 # NOTE: This will only work if you DO NOT later mount /data as an external volume.
 #       If you need to use an external volume for persistence then
 #       copy your settings and flows files to that volume instead.
+
+ENV FLOWS=flows_lo2fe.json
+
 COPY settings.js /data/settings.js
-COPY flows_nhe-livebobject-connector.json /data/flows_nhe-livebobject-connector.json
-COPY flows_nhe-livebobject-connector_cred.json /data/flows_nhe-livebobject-connector_cred.json
+#COPY flows_nhe-livebobject-connector.json /data/flows_nhe-livebobject-connector.json
+#COPY flows_nhe-livebobject-connector_cred.json /data/flows_nhe-livebobject-connector_cred.json
+
+COPY flows_lo2fe.json /data/flows_lo2fe.json
+COPY flows_lo2fe_cred.json /data/flows_lo2fe_cred.json.json
+
 
 # You should add extra nodes via your package.json file but you can also add them here:
 #WORKDIR /usr/src/node-red
