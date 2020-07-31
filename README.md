@@ -74,8 +74,8 @@ Below is the Environment Parameter required by the images
 
 | Environment Parameter | Description | Value |
 | --- | --- | --- |
-| NODE_RED_CREDENTIAL_SECRET | Credential Secret to encode the  | lo2fe-secret | 
-| FLOWS | NodeRed Flow Name  | flows_nhe-livebobject-connector.json |
+| LO_URI | URI to connect to Live Object | ssl://liveobjects.orange-business.com:8883 |
+| LO_API_KEY | API Key with relevant right to read Live Object FIFO | Value is stored in Secret *lo2fe-secret* (LO_API_KEY)| 
 | DIS_ENDPOINT | DIS End Point. Please refer to  [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com |  
 | DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | eu-west-0 |  
 | DIS_STREAMNAME | Flexible Engine Project DIS StreamName | eu-west-0 |  
@@ -83,8 +83,6 @@ Below is the Environment Parameter required by the images
 | DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_PASSWORD)|  
 | DIS_AK | Flexible Engine Credential correspond to Access Key (AK) | Value is stored in Secret *lo2fe-secret* (DIS_AK)| 
 | DIS_SK | Flexible Engine Credential correspond to Secredt Key (SD) | Value is stored in Secret *lo2fe-secret* (DIS_SK)| 
-| LO_URI | URI to connect to Live Object | ssl://liveobjects.orange-business.com:8883 |
-| LO_API_KEY | API Key with relevant right to read Live Object FIFO | Value is stored in Secret *lo2fe-secret* (LO_API_KEY)| 
 
 
 ### 3.2 Deploying Through Kubectl commande line
