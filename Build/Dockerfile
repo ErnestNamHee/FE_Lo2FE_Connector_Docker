@@ -16,7 +16,7 @@ ENV FLOWS=flows_lo2fe.json
 
 #COPY settings.js /data/settings.js
 #"COPY flows_lo2fe.json /data/flows_lo2fe.json
-"COPY flows_lo2fe_cred.json /data/flows_lo2fe_cred.json
+COPY flows_lo2fe_cred.json /data/flows_lo2fe_cred.json
 
 COPY settings.js .
 COPY flows_lo2fe.json .
