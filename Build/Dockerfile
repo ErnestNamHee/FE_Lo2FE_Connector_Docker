@@ -23,14 +23,14 @@ COPY flows_lo2fe.json .
 COPY flows_lo2fe_cred.json .
 
 #COPY copyflow scrip to container
-COPY Scripts/lo2fe_dockerentrypoint.sh /lo2/usr/src/node-red/lo2fe_dockerentrypoint.sh
+COPY Scripts/lo2fe_dockerentrypoint.sh /usr/src/node-red/lo2fe_dockerentrypoint.sh
 
 USER root
-RUN ["chmod", "+x", "/lo2/usr/src/node-red/lo2fe_dockerentrypoint.sh"]
+RUN ["chmod", "+x", "/usr/src/node-red/lo2fe_dockerentrypoint.sh"]
 
 # You should add extra nodes via your package.json file but you can also add them here:
 #WORKDIR /usr/src/node-red
 #RUN npm install node-red-node-smooth
 USER node-red
-#ENTRYPOINT [ "/lo2/usr/src/node-red/fe_dockerentrypoint.sh" ]
+#ENTRYPOINT [ "/usr/src/node-red/fe_dockerentrypoint.sh" ]
 CMD ["npm", "start", "--cache", "/data/.npm", "--", "--userDir", "/data"]
