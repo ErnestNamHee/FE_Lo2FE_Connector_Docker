@@ -69,9 +69,8 @@ spec:
      imagePullSecrets:
        - name: default-secret
        - name: lo2fe-secret 
-     volumes:
-     - name: pvc-data
-       persistentVolumeClaim:
-        # claimName: cce-sfs-import-ernest-cce-pvc 
-        claimName: cce-evs-liveobject 
+     #volumes:
+     #- name: pvc-data
+     #  persistentVolumeClaim:
+     #   claimName: cce-evs-liveobject 
 
