@@ -14,14 +14,20 @@ RUN npm i node-red-node-base64
 
 ENV FLOWS=flows_lo2fe.json
 
-COPY settings.js /data/settings.js
-COPY flows_lo2fe.json /data/flows_lo2fe.json
-COPY flows_lo2fe_cred.json /data/flows_lo2fe_cred.json
+#COPY settings.js /data/settings.js
+#"COPY flows_lo2fe.json /data/flows_lo2fe.json
+"COPY flows_lo2fe_cred.json /data/flows_lo2fe_cred.json
 
 COPY settings.js .
 COPY flows_lo2fe.json .
 COPY flows_lo2fe_cred.json .
 
+#COPY copyflow scrip to container
+COPY Scripts/lo2fe_dockerentrypoint.sh lo2fe_dockerentrypoint.sh
+
 # You should add extra nodes via your package.json file but you can also add them here:
 #WORKDIR /usr/src/node-red
 #RUN npm install node-red-node-smooth
+
+ENTRYPOINT [ "lo2fe_entrypoint.sh" ]
+CMD ["npm", "start", "--cache", "/data/.npm", "--", "--userDir", "/data"]
