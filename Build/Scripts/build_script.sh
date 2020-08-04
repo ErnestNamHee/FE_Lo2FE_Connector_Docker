@@ -1,5 +1,9 @@
 #!/bin/bash -x
 
-BUILD_PATH=`pwd`
+DOCKER_BUILD_PATH=`pwd`
+DOCKER_DEPLOYMENT_PATH=`$DOCKER_BUILD_PATH/../../Deployment` 
 
-echo $BUILD_PATH
+echo "#####################################################"
+echo "# DOCKER BUILD PATH : $DOCKER_BUILD_PATH"
+echo "# DOCKER DEPLOYMENT PATH : $DOCKER_DEPLOYMENT_PATH"
+
