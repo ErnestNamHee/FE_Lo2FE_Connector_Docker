@@ -1,6 +1,10 @@
-# Lo2FE_Docker
+# Lo2FE Docker Connector
 
 This docker image includes NodeRed connector allowing connection to LiveObject FIFO and everytime a message is published in Live Object FIFO, the message will be delivered and published to Flexible Engine DIS (Data Injection Service).
+
+## 0. Docker Repository
+
+ The Docker Image for Lo2FE Docker Connector is maintained in Docker Hub Public repository available at  [Lo2FE Docker Image at DockerHub Repository](https://hub.docker.com/r/enamhee/lo2fe)
 
 ## 1. Pre-Requisite
 
@@ -17,6 +21,8 @@ The following information are required to connect and collect the Live Object FI
 | --- | --- | --- |
 | Live Object API Key | API Key with relevant right to read Live Object FIFO | d2bf5cf323894b4bae08beac9cc4276b |
 | Live Object URI | URI to connect to Live Object | ssl://liveobjects.orange-business.com:8883 |
+| Live Object FIFO | Live Object FIFO (First In First Out) Queue where the message are stored| fifo/Flexible_Engine_FIFO |
+
 
 ### 1.2 Flexible Engine 
 
@@ -78,6 +84,7 @@ Below is the Environment Parameter required by the images
 | --- | --- | --- |
 | LO_URI | URI to connect to Live Object | ssl://liveobjects.orange-business.com:8883 |
 | LO_API_KEY | API Key with relevant right to read Live Object FIFO | Value is stored in Secret *lo2fe-secret* (LO_API_KEY)| 
+| LO_FIFO | Live Object FIFO (First In First Out) Queue where the message are stored| ie. fifo/Flexible_Engine_FIFO |
 | DIS_ENDPOINT | DIS End Point. Please refer to  [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com |  
 | DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | eu-west-0 |  
 | DIS_STREAMNAME | Flexible Engine Project DIS StreamName | ie. dis-liveobject |  
@@ -88,6 +95,10 @@ Below is the Environment Parameter required by the images
 
 
 ### 3.2 Deploying Through Kubectl commande line
+
+You can deploy Lo2FE Connector Docker Image using Kubectl commande line
+
+You will need 
 
 ## 4. Logging to Admin Console
 
