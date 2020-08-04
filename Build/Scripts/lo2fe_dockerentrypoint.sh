@@ -10,5 +10,25 @@ else
     cp settings.js $FILE1
 fi  
 
+# Test the existence of file other wise copy
+FILE2='/data/flows_lo2fe.json'
+
+if test -f "$FILE2" ; then 
+    echo "$FILE2 exists"
+else 
+    echo "Copy flows_lo2fe.json to $FILE2"
+    cp flows_lo2fe.json $FILE2
+fi  
+
+# Test the existence of file other wise copy
+FILE3='/data/flows_lo2fe_cred.json'
+
+if test -f "$FILE3" ; then 
+    echo "$FILE3 exists"
+else 
+    echo "Copy flows_lo2fe_cred.json to $FILE3"
+    cp flows_lo2fe_cred.json $FILE3
+fi  
+
 # Execute Argument in Dockerfile CMD commande line 
 exec "$@"

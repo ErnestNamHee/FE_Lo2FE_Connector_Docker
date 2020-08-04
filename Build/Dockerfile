@@ -32,5 +32,5 @@ RUN ["chmod", "+x", "/usr/src/node-red/lo2fe_dockerentrypoint.sh"]
 #WORKDIR /usr/src/node-red
 #RUN npm install node-red-node-smooth
 USER node-red
-#ENTRYPOINT [ "/usr/src/node-red/fe_dockerentrypoint.sh" ]
+ENTRYPOINT [ "/usr/src/node-red/lo2fe_dockerentrypoint.sh" ]
 CMD ["npm", "start", "--cache", "/data/.npm", "--", "--userDir", "/data"]
