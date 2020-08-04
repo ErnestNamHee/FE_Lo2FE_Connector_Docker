@@ -17,7 +17,7 @@ echo "#####################"
 
 docker build -t enamhee/lo2fe:0.11 -t enamhee/lo2fe:latest .
 
-pause
+read -p "Hit Enter to continue" dd
 
 echo "#####################"
 echo "# 2. DOCKER PUSH    #"
@@ -25,7 +25,7 @@ echo "#####################"
 
 docker push enamhee/lo2fe
 
-pause
+read -p "Hit Enter to continue" dd
 
 echo "#####################"
 echo "# 3. KUBECTL DEPLOY #"
