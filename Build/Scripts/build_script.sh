@@ -11,14 +11,25 @@ echo "# DOCKER DEPLOYMENT PATH : $DOCKER_DEPLOYMENT_PATH"
 echo "# DOCKER PARENT PATH : $DOCKER_PARENT_PATH"
 echo "#"
 
-echo "# 1. DOCKER BUILD "
+echo "#####################"
+echo "# 1. DOCKER BUILD   #"
+echo "#####################"
+
 docker build -t enamhee/lo2fe:0.11 -t enamhee/lo2fe:latest .
 
-echo "# 2. DOCKER PUSH "
+pause
+
+echo "#####################"
+echo "# 2. DOCKER PUSH    #"
+echo "#####################"
 
 docker push enamhee/lo2fe
 
-echo "# 3. KUBECTL DEPLOY "
+pause
+
+echo "#####################"
+echo "# 3. KUBECTL DEPLOY #"
+echo "#####################"
 
 cd $DOCKER_DEPLOYMENT_PATH
 
