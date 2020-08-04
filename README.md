@@ -32,19 +32,21 @@ The following information are required to connect to Flexible Engine Data Inject
 | DIS User Name | Flexible Engine DIS Credential correspond to Flexible Engine UserName | username.namhee@domain.com |
 | DIS Password | Flexible Engine DIS Credential correspond to Flexible Engine Password | Wqt5TbUyemsJ58nMZYxGHacmuQnOyRhwCPaNofY2 |
 
-## 2. (Optional) Create Cloud Container Engine (CCE) on Flexible Engine
+## 2. (Optional) Create Cloud Container Engine (CCE) and Elastic Load Balancer (ELB) on Flexible Engine
 
 In order to run the docker image on Flexible Engine, Flexible Engine Cloud Container Engine (CCE) can be used to deploy the connector container images
+
+### 2.1 Create the Elastic Load Balancer (ELB)
+
+The detail description on how to create an Elastic Load Balancer with associated EIP in available here [(Create Enhanced Elastic Load Balancer)](https://docs.prod-cloud-ocb.orange-business.com/usermanual/elb/en-us_topic_0015479967.html)
 
 ### 2.1 Create the Kubernetes Cluster
 
 The detail description on how to create a Kubernetes Cluster in available here [(Create Hybrid Cluster with CCE)](https://docs.prod-cloud-ocb.orange-business.com/usermanual2/cce/cce_01_0028.html)
 
-### 2.2 Create the Storage to persist the connector data
+### 2.2 Create the Secret to store sensitive data
 
-### 2.3 Create the Secret to store sensitive data
-
-For security reason, the sensitive Data such as API KEYs are kept inside Secret and the value are encoded using base64 
+For security reason, the sensitive Data such as API KEYs, Login, Password are kept inside Secret and the value are encoded using base64 
 In order to encode the data, you can use online encoding tools (https://www.base64encode.org/)
 
 | Information | Description | Example Value (ENCODED in base64) | Example Value (NON ENCODED base64) |
@@ -62,7 +64,7 @@ The Lo2FE connector is available as docker image available on Docker Hub at [her
 
 It is possible to deploy the Lo2FE connector using two methods:
   - Through Flexible Engine CCE User Interface
-  - Through Kubectl Command line
+  - Through Kubectl Command Line
 
 
 ### 3.1 Deploying Through Flexible Engine CCE User Interface
@@ -78,7 +80,7 @@ Below is the Environment Parameter required by the images
 | LO_API_KEY | API Key with relevant right to read Live Object FIFO | Value is stored in Secret *lo2fe-secret* (LO_API_KEY)| 
 | DIS_ENDPOINT | DIS End Point. Please refer to  [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com |  
 | DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | eu-west-0 |  
-| DIS_STREAMNAME | Flexible Engine Project DIS StreamName | eu-west-0 |  
+| DIS_STREAMNAME | Flexible Engine Project DIS StreamName | ie. dis-liveobject |  
 | DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User Name | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_USERNAME)|  
 | DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_PASSWORD)|  
 | DIS_AK | Flexible Engine Credential correspond to Access Key (AK) | Value is stored in Secret *lo2fe-secret* (DIS_AK)| 
