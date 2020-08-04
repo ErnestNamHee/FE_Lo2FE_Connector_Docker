@@ -17,7 +17,7 @@ if test -f "$FILE2" ; then
     echo "$FILE2 exists"
 else 
     echo "Copy flows_lo2fe.json to $FILE2"
-    cp flows_lo2fe.json $FILE2
+    cp -u flows_lo2fe.json $FILE2
 fi  
 
 # Test the existence of file other wise copy

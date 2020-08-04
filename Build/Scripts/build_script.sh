@@ -16,7 +16,7 @@ echo "#####################"
 echo "# 1. DOCKER BUILD   #"
 echo "#####################"
 
-docker build -t enamhee/lo2fe:0.13 -t enamhee/lo2fe:latest $DOCKER_BUILD_PATH
+docker build --no-cache -t enamhee/lo2fe:0.15 -t enamhee/lo2fe:latest $DOCKER_BUILD_PATH
 
 read -p "Hit Enter to continue" dd
 
