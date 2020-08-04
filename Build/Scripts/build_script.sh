@@ -1,7 +1,8 @@
 #!/bin/bash -x
 
-DOCKER_BUILD_PATH=`pwd`
-DOCKER_PARENT_PATH="$(dirname "$(dirname $DOCKER_BUILD_PATH)")"
+DOCKER_CURRENT_PATH=`pwd`
+DOCKER_BUILD_PATH="$(dirname $DOCKER_CURRENT_PATH)"
+DOCKER_PARENT_PATH="$(dirname $DOCKER_BUILD_PATH)"
 DOCKER_DEPLOYMENT_PATH=`echo $DOCKER_PARENT_PATH/Deployment` 
 
 echo "#####################################################"
@@ -15,7 +16,7 @@ echo "#####################"
 echo "# 1. DOCKER BUILD   #"
 echo "#####################"
 
-docker build -t enamhee/lo2fe:0.11 -t enamhee/lo2fe:latest .
+docker build -t enamhee/lo2fe:0.12 -t enamhee/lo2fe:latest $DOCKER_BUILD_PATH
 
 read -p "Hit Enter to continue" dd
 
