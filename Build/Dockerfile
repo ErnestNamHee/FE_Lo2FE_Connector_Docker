@@ -29,5 +29,5 @@ COPY Scripts/lo2fe_dockerentrypoint.sh lo2fe_dockerentrypoint.sh
 #WORKDIR /usr/src/node-red
 #RUN npm install node-red-node-smooth
 
-ENTRYPOINT [ "lo2fe_entrypoint.sh" ]
+ENTRYPOINT [ "lo2fe_dockerentrypoint.sh" ]
 CMD ["npm", "start", "--cache", "/data/.npm", "--", "--userDir", "/data"]
