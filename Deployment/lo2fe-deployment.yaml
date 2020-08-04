@@ -60,10 +60,10 @@ spec:
              name: lo2fe-secret
              key: LO_API_KEY 
 
-       volumeMounts:
-       - mountPath: /data 
-         name: pvc-data
-         subPath: lo2fe
+       #volumeMounts:
+       #- mountPath: /data 
+       #  name: pvc-data
+       #  subPath: lo2fe
 
 
      imagePullSecrets:
