@@ -164,7 +164,7 @@ deployment.apps/lo2fe   1/1     1            1           7s
 NAME                               DESIRED   CURRENT   READY   AGE
 replicaset.apps/lo2fe-54f748cfb7   1         1         1       7s
 ```
-### 4. Create Dis Stream
+### 4. Create Flexible Engine DIS Stream
 
 Create DIS Stream using following procedure [Creating a DIS Stream](https://docs.prod-cloud-ocb.orange-business.com/usermanual/dis/en-us_topic_0034903799.html)
 
