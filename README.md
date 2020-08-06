@@ -89,9 +89,57 @@ Below is the Environment Parameter required by the images
 
 ### 3.2 Deploying Through Kubectl commande line
 
-You can deploy Lo2FE Connector Docker Image using Kubectl commande line
+In order to simplify the deployment process, it is possible to deploy Lo2FE Connector Docker using Kubectl commande line
 
-You will need 
+For this, a virtual machine (ie. Flexible Engine ECS) which can access to Flexible Engine CCE Cluster (Through Internet using EIP or within VPC with following software installed:
+  - Kubectl
+  - Docker
+  - Git
+
+#### 3.2.1 Connecting to Kubernetes Cluster using Kubectl
+
+Flexible Engine CCE provides guideline to install and configure Kubectl to connect to CCE Cluster at [Connecting to a Kubernetes Cluster Using kubectl](https://docs.prod-cloud-ocb.orange-business.com/usermanual2/cce/cce_01_0107.html)
+
+#### 3.2.2 Clone Git Repository
+
+``` 
+  git clone https://github.com/ErnestNamHee/FE_Lo2FE_Connector_Docker.git
+```
+#### 3.2.3 Update information from deployment.yaml files
+
+``` 
+  cd FE_Lo2FE_Connector_Docker/Deployment/
+  vi lo2fe-deployment.yaml
+```
+Replace the following parameters with the right value
+
+| Environment Parameter | Description | Value |
+| --- | --- | --- |
+| LO_URI | URI to connect to Live Object | ssl://liveobjects.orange-business.com:8883 |
+| LO_FIFO | Live Object FIFO (First In First Out) Queue where the message are stored| ie. fifo/Flexible_Engine_FIFO |
+| DIS_ENDPOINT | DIS End Point. Please refer to  [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com |  
+| DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | eu-west-0 |  
+| DIS_STREAMNAME | Flexible Engine Project DIS StreamName | ie. dis-liveobject |  
+
+``` 
+  vi lo2fe-service.yaml
+```
+Replace the following parameter `kubernetes.io/elb.id` with the right value from Flexible Engine ELB console
+
+| Parameter | Description | Value |
+| --- | --- | --- |
+| kubernetes.io/elb.id | ID of the Elastic Load Balancer | 46b2e252-b789-47cd-b8fc-8f6098ac4017 |
+| loadBalancerIP | IP Adress of the Elastic Load Balancer | 90.84.195.132 |
+
+
+
+#### 3.2.3 Deploy the Lo2fe Connector
+
+``` 
+  cd FE_Lo2FE_Connector_Docker/Deployment/
+  vi lo2fe-deployment.yaml
+```
+
 
 ## 4. Logging to Admin Console
 
