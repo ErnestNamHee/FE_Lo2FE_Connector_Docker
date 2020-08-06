@@ -15,15 +15,10 @@ spec:
        app: lo2fe
    spec:
      containers:
-     #- image: 100.125.0.94:20202/ernest/lo2fe:latest
      - image: enamhee/lo2fe:latest
        imagePullPolicy: Always
        name: lo2fe
        env:
-       #- name: NODE_RED_CREDENTIAL_SECRET
-       #  value: "lo2fesecret"
-       #- name: FLOWS
-       #  value: "flows_lo2fe.json"
        - name: DIS_ENDPOINT
          value: "https://dis.eu-west-0.prod-cloud-ocb.orange-business.com"
        - name: DIS_PROJECT
@@ -40,16 +35,6 @@ spec:
            secretKeyRef:
              name: lo2fe-secret
              key: DIS_TOKEN_PASSWORD
-       #- name: DIS_AK
-       #  valueFrom:
-       #    secretKeyRef:
-       #      name: lo2fe-secret 
-       #      key: DIS_AK 
-       #- name: DIS_SK
-       #  valueFrom:
-       #    secretKeyRef:
-       #      name: lo2fe-secret
-       #      key: DIS_SK
        - name: LO_URI 
          value: "ssl://liveobjects.orange-business.com:8883"
        - name: LO_FIFO
