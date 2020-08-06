@@ -113,23 +113,23 @@ Flexible Engine CCE provides guideline to install and configure Kubectl to conne
 ```
 Replace the following parameters with the right value
 
-| Environment Parameter | Description | Value |
+| Environment Parameter | Description | Example Value |
 | --- | --- | --- |
 | LO_URI | URI to connect to Live Object | ssl://liveobjects.orange-business.com:8883 |
 | LO_FIFO | Live Object FIFO (First In First Out) Queue where the message are stored| ie. fifo/Flexible_Engine_FIFO |
 | DIS_ENDPOINT | DIS End Point. Please refer to  [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com |  
-| DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | eu-west-0 |  
+| DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | ie. eu-west-0 |  
 | DIS_STREAMNAME | Flexible Engine Project DIS StreamName | ie. dis-liveobject |  
 
 ``` 
   vi lo2fe-service.yaml
 ```
-Replace the following parameter `kubernetes.io/elb.id` with the right value from Flexible Engine ELB console
+Replace the following parameter with the right value from Flexible Engine ELB console
 
-| Parameter | Description | Value |
+| Parameter | Description | Example Value |
 | --- | --- | --- |
-| kubernetes.io/elb.id | ID of the Elastic Load Balancer | 46b2e252-b789-47cd-b8fc-8f6098ac4017 |
-| loadBalancerIP | IP Adress of the Elastic Load Balancer | 90.84.195.132 |
+| kubernetes.io/elb.id | ID of the Elastic Load Balancer | ie. 46b2e252-b789-47cd-b8fc-8f6098ac4017 |
+| loadBalancerIP | IP Adress of the Elastic Load Balancer | ie. 90.84.195.132 |
 
 
 
