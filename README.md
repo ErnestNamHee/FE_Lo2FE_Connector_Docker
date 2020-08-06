@@ -164,13 +164,15 @@ deployment.apps/lo2fe   1/1     1            1           7s
 NAME                               DESIRED   CURRENT   READY   AGE
 replicaset.apps/lo2fe-54f748cfb7   1         1         1       7s
 ```
-### 4. Create Flexible Engine DIS Stream
+## 4. Create Flexible Engine DIS Stream
 
 Create DIS Stream using following procedure [Creating a DIS Stream](https://docs.prod-cloud-ocb.orange-business.com/usermanual/dis/en-us_topic_0034903799.html)
 
-## 4. Logging to NodeRed Editor Console
+## 5. Logging to NodeRed Editor Console
 
-Login : admin
-Password : lo2fepassword
+You can login to NodeRed Editor through the Load Balancer EIP address at port 1880
+  - URL : <Load Balancer EIP>:1880 
+  - Login : admin
+  - Password : lo2fepassword
 
-## 4. (Optional) Build the Lo2FE_Docker image from GIThub repository
+## 6. (Optional) Build the Lo2FE_Docker image from GIThub repository
