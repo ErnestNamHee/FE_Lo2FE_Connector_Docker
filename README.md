@@ -55,9 +55,9 @@ In order to encode the data, you can use online encoding tools (https://www.base
 
 | Information | Description | Example Value (ENCODED in base64) | Example Value (NON ENCODED base64) |
 | --- | --- | --- | --- |
-| LO_API_KEY | Life Object API Key | NjAzODE2ZjIwOTczNGE0MDg0MjFlNzEyYzAxNGRiMDIx= | d2bf5cf323894b4bae08beac9cc4276e |
-| DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User | ZXJuZXN0Lm5hbS5oZWUx= |  xxxxxxx|
-| DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password  | NVR2bWRsbWRtczE1ZUAx= | xxxxxxx|
+| LO_API_KEY | Life Object API Key | ZDJiZjVjZjMyMzg5NGI0YmFlMDhiZWFjOWNjNDI3NmU= | d2bf5cf323894b4bae08beac9cc4276e |
+| DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User | ZXJuZXN0Lm5hbS5oZWUx= |  jame.durand |
+| DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password  | NVR2bWRsbWRtczE1ZUAx= | password |
 
 
 ## 3. Deploy the Lo2FE_Connector on Flexible Engine CCE
