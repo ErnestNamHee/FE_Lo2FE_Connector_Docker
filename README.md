@@ -168,6 +168,8 @@ replicaset.apps/lo2fe-54f748cfb7   1         1         1       7s
 
 Create DIS Stream using following procedure [Creating a DIS Stream](https://docs.prod-cloud-ocb.orange-business.com/usermanual/dis/en-us_topic_0034903799.html)
 
+Make sure your DIS has the same name ie. `dis-liveobject` as the one provided in step 3.1 or 3.2.3 
+
 ## 5. Logging to NodeRed Editor Console
 
 You can login to NodeRed Editor through the Load Balancer EIP address at port 1880
