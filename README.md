@@ -30,13 +30,11 @@ The following information are required to connect to Flexible Engine Data Inject
 
 | Information | Description | Example Value |
 | --- | --- | --- |
-| DIS EndPoint | Endpoint to connect to Flexible Engine DIS Service | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com" |
+| DIS EndPoint | Endpoint to connect to Flexible Engine DIS Service. This is information available at [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com" |
 | DIS Project | Flexible Engine Project into which DIS Service has been created | eu-west-0 |
-| DIS StreamName | Flexible Engine Project DIS StreamName | dis-liveobject |
-| DIS AK | Flexible Engine Credential correspond to Flexible Engine Access Key (AK) | NVR2bWRsbWRtczE1ZUx= |
-| DIS SK | Flexible Engine Credential correspond to Flexible Engine Secret Key (SK) | Wqt5TbUyemsJ58nMZYxGHacmuQnOyRhwCPaNofY2 |
-| DIS User Name | Flexible Engine DIS Credential correspond to Flexible Engine UserName | username.namhee@domain.com |
-| DIS Password | Flexible Engine DIS Credential correspond to Flexible Engine Password | Wqt5TbUyemsJ58nMZYxGHacmuQnOyRhwCPaNofY2 |
+| DIS StreamName | Flexible Engine Project DIS StreamName. The StreamName is created later in the procedure | ie. dis-liveobject |
+| Flexible Engine User Name | Flexible Engine UserName available from Flexible Engine Technical Console. Refer to [Flexible Engine My Credential](https://docs.prod-cloud-ocb.orange-business.com/usermanual/ac/en-us_topic_0046783936.html)| ie. jame.durand |
+| Flexible Engine Password | Flexible Engine Password available from Flexible Engine Technical Console.Refer to [Flexible Engine My Credential](https://docs.prod-cloud-ocb.orange-business.com/usermanual/ac/en-us_topic_0046783936.html) | ie. password |
 
 ## 2. (Optional) Create Cloud Container Engine (CCE) and Elastic Load Balancer (ELB) on Flexible Engine
 
@@ -88,11 +86,8 @@ Below is the Environment Parameter required by the images
 | DIS_ENDPOINT | DIS End Point. Please refer to  [Flexible Engine EndPoint](https://docs.prod-cloud-ocb.orange-business.com/endpoint/index.html) | https://dis.eu-west-0.prod-cloud-ocb.orange-business.com |  
 | DIS_PROJECT | Flexible Engine Project Id or Region where the DIS has been created | eu-west-0 |  
 | DIS_STREAMNAME | Flexible Engine Project DIS StreamName | ie. dis-liveobject |  
-| DIS_TOKEN_USERNAME | Flexible Engine Credential correspond to User Name | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_USERNAME)|  
-| DIS_TOKEN_PASSWORD | Flexible Engine Credential correspond to Password | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_PASSWORD)|  
-| DIS_AK | Flexible Engine Credential correspond to Access Key (AK) | Value is stored in Secret *lo2fe-secret* (DIS_AK)| 
-| DIS_SK | Flexible Engine Credential correspond to Secredt Key (SD) | Value is stored in Secret *lo2fe-secret* (DIS_SK)| 
-
+| DIS_TOKEN_USERNAME | Flexible Engine UserName available from Flexible Engine Technical Console | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_USERNAME)|  
+| DIS_TOKEN_PASSWORD | Flexible Engine Password available from Flexible Engine Technical Console | Value is stored in Secret *lo2fe-secret* (DIS_TOKEN_PASSWORD)|  
 
 ### 3.2 Deploying Through Kubectl commande line
 

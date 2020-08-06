@@ -3,7 +3,7 @@ kind: Service
 metadata:
  annotations:
    kubernetes.io/elb.class: union
-   kubernetes.io/elb.id: a28edebe-1fd4-42fc-965e-7356f9051be7 
+   kubernetes.io/elb.id: 46b2e252-b789-47cd-b8fc-8f6098ac4017 
  labels:
    app: lo2fe
  name: lo2fe

@@ -40,16 +40,16 @@ spec:
            secretKeyRef:
              name: lo2fe-secret
              key: DIS_TOKEN_PASSWORD
-       - name: DIS_AK
-         valueFrom:
-           secretKeyRef:
-             name: lo2fe-secret 
-             key: DIS_AK 
-       - name: DIS_SK
-         valueFrom:
-           secretKeyRef:
-             name: lo2fe-secret
-             key: DIS_SK
+       #- name: DIS_AK
+       #  valueFrom:
+       #    secretKeyRef:
+       #      name: lo2fe-secret 
+       #      key: DIS_AK 
+       #- name: DIS_SK
+       #  valueFrom:
+       #    secretKeyRef:
+       #      name: lo2fe-secret
+       #      key: DIS_SK
        - name: LO_URI 
          value: "ssl://liveobjects.orange-business.com:8883"
        - name: LO_FIFO
