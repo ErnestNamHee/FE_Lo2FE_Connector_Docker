@@ -91,7 +91,7 @@ Below is the Environment Parameter required by the images
 
 In order to simplify the deployment process, it is possible to deploy Lo2FE Connector Docker using Kubectl commande line
 
-For this, a virtual machine (ie. Flexible Engine ECS) which can access to Flexible Engine CCE Cluster (Through Internet using EIP or within VPC with following software installed:
+For this, a virtual machine (ie. Flexible Engine ECS) with Linux (Ubuntu, Redhat, ..) which can access to Flexible Engine CCE Cluster (Through Internet using EIP or within VPC with following software installed:
   - Kubectl
   - Docker
   - Git
@@ -103,6 +103,8 @@ Flexible Engine CCE provides guideline to install and configure Kubectl to conne
 #### 3.2.2 Clone Git Repository
 
 ``` 
+  mkdir lo2fe
+  cd lo2fe
   git clone https://github.com/ErnestNamHee/FE_Lo2FE_Connector_Docker.git
 ```
 #### 3.2.3 Update information from deployment.yaml files
