@@ -139,9 +139,31 @@ Replace the following parameter with the right value from Flexible Engine ELB co
 
 ``` 
   cd FE_Lo2FE_Connector_Docker/Deployment/
-  vi lo2fe-deployment.yaml
+  kubectl create -f lo2fe-deployment.yaml -f lo2fe-service.yaml
 ```
+You can check that the Lo2fe connector is properly running by typing or checking on FE CCE Console  
 
+``` 
+  kubectl get all
+``` 
+
+Check that `deployment.apps/lo2fe` and `service/lo2fe` are running
+
+
+``` 
+  NAME                         READY   STATUS    RESTARTS   AGE
+pod/lo2fe-54f748cfb7-cfk47   1/1     Running   0          7s
+
+NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)          AGE
+service/kubernetes   ClusterIP      10.247.0.1      <none>          443/TCP          9d
+service/lo2fe        LoadBalancer   10.247.130.82   90.84.195.132   1880:31619/TCP   7s
+
+NAME                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/lo2fe   1/1     1            1           7s
+
+NAME                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/lo2fe-54f748cfb7   1         1         1       7s
+```
 
 ## 4. Logging to Admin Console
 
