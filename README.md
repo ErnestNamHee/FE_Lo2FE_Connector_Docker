@@ -173,7 +173,7 @@ Make sure your DIS has the same name ie. `dis-liveobject` as the one provided in
 ## 5. Logging to NodeRed Editor Console
 
 You can login to NodeRed Editor through the Load Balancer EIP address at port 1880
-  - URL : <Load Balancer EIP>:1880 
+  - URL : < Load Balancer EIP >:1880 
   - Login : admin
   - Password : lo2fepassword
 
